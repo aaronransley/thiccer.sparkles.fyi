@@ -9,7 +9,9 @@
     <textarea
       class="input result"
       v-model="textResult"
+      @keydown.prevent=''
       @focus="$event.target.select();"
+      @click="$event.target.select();"
     ></textarea>
   </section>
 </template>
@@ -76,8 +78,9 @@ section {
   font-size: 40px;
   transition: height 0.4s ease;
   outline: none;
-  font-family: "Comic Sans MS";
+  font-family: "Comic Sans MS", "MarkerFelt-Thin";
   border: none;
+  border-radius: 0;
 }
 .result {
   height: 0;
